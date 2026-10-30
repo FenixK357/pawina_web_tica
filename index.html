@@ -151,7 +151,8 @@
       // Leer usuarios actuales
       let usuarios = [];
       try {
-        const res = await fetch('data/usuarios.json');
+        // ✅ CORRECCIÓN: Llamamos a la API para leer el Blob
+        const res = await fetch('/api/usuarios');
         usuarios = await res.json();
       } catch (err) {
         usuarios = [];
@@ -172,9 +173,9 @@
       };
       usuarios.push(nuevo);
 
-      // Guardar en el JSON (necesita servidor, ver server.js)
+      // Guardar en el JSON
       try {
-        await fetch('api/usuarios', {
+        await fetch('/api/usuarios', { // Añadí la barra '/' al inicio por seguridad
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(usuarios)
@@ -183,12 +184,12 @@
         mensaje.className = 'mensaje ok';
         formRegistro.reset();
       } catch (err) {
-        mensaje.textContent = 'Error al guardar. ¿Está corriendo el servidor?';
+        mensaje.textContent = 'Error al guardar. Inténtalo de nuevo.';
         mensaje.className = 'mensaje error';
       }
     });
 
-    // LOGIN
+        // LOGIN
     formLogin.addEventListener('submit', async (e) => {
       e.preventDefault();
       const usuario = document.getElementById('loginUser').value.trim();
@@ -196,7 +197,8 @@
 
       let usuarios = [];
       try {
-        const res = await fetch('data/usuarios.json');
+        // ✅ CORRECCIÓN: Llamamos a nuestra API, no a un archivo local
+        const res = await fetch('/api/usuarios');
         usuarios = await res.json();
       } catch (err) {
         usuarios = [];
@@ -209,7 +211,7 @@
       if (encontrado) {
         // Guardamos el usuario logueado para usarlo luego
         sessionStorage.setItem('usuarioActual', encontrado.usuario);
-        window.location.href = 'test1.html';
+        window.location.href = 'test1.html'; // (o test.html, como lo tengas nombrado)
       } else {
         mensaje.textContent = 'Usuario o contraseña incorrectos.';
         mensaje.className = 'mensaje error';
