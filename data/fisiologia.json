@@ -1,0 +1,166 @@
+{
+  "Fisiología Renal": [
+    {
+      "codigo": "FIS-REN-1",
+      "pregunta": "Una niña de 6 meses es llevada al servicio de emergencia después de ingerir un frasco de pastillas. Presenta agitación y taquipnea. Laboratorio: Na 143, K 4.0, Cl 104, HCO3 19, pH 7.28. ¿Cuál medicamento ingirió?",
+      "respuesta1": "Antagonista de aldosterona",
+      "respuesta2": "Antiácido",
+      "respuesta3": "Analgésico opioide",
+      "respuestaCorrecta": "Diurético de asa"
+    },
+    {
+      "codigo": "FIS-REN-2",
+      "pregunta": "¿En qué segmento renal se incrementa principalmente la reabsorción regulada de calcio?",
+      "respuesta1": "Túbulo proximal",
+      "respuesta2": "Rama ascendente delgada",
+      "respuesta3": "Rama descendente delgada",
+      "respuestaCorrecta": "Túbulo contorneado distal"
+    },
+    {
+      "codigo": "FIS-REN-3",
+      "pregunta": "Varón de 35 años con síndrome nefrótico y proteinuria masiva, presenta edema generalizado. ¿Cuál es el principal mecanismo hemodinámico responsable?",
+      "respuesta1": "Aumento de la permeabilidad capilar inflamatoria",
+      "respuesta2": "Aumento de la presión hidrostática capilar sistémica",
+      "respuesta3": "Retención de sodio a nivel tubular",
+      "respuestaCorrecta": "Disminución de la presión oncótica plasmática"
+    },
+    {
+      "codigo": "FIS-REN-4",
+      "pregunta": "Hombre de 45 años con vómitos severos por 3 días. PA 125/80, FC 110, RR 24. ¿Qué segmento de nefrona es el principal responsable de mantener la alteración ácido-base?",
+      "respuesta1": "Túbulo convoluto proximal",
+      "respuesta2": "Miembro delgado y descendente del bucle de Henle",
+      "respuesta3": "Túbulo contorneado distal",
+      "respuestaCorrecta": "Conducto de recogida"
+    },
+    {
+      "codigo": "FIS-REN-5",
+      "pregunta": "Mujer deshidratada con aumento de osmolaridad plasmática. La ADH aumenta y actúa sobre el túbulo colector. ¿Qué cambio tubular permite concentrar la orina?",
+      "respuesta1": "Disminución de acuaporina 2 apical",
+      "respuesta2": "Inhibición del cotransportador Na-K-2Cl",
+      "respuesta3": "Cierre de canales ENaC",
+      "respuestaCorrecta": "Inserción de acuaporina 2 apical"
+    },
+    {
+      "codigo": "FIS-REN-6",
+      "pregunta": "Niña de 7 años con debilidad crónica, hiponatremia, hipokalemia, alcalosis metabólica, renina elevada e hiperplasia de células yuxtaglomerulares. ¿Cuál diurético actúa en el mismo lugar que el defecto de este síndrome?",
+      "respuesta1": "Acetazolamida",
+      "respuesta2": "Espironolactona",
+      "respuesta3": "Hidroclorotiazida",
+      "respuestaCorrecta": "Furosemida"
+    },
+    {
+      "codigo": "FIS-REN-7",
+      "pregunta": "Mujer de 53 años. TFG estimada en 100 mL/min (inulina) y 125 mL/min (compuesto X). ¿Qué mecanismo explica la diferencia?",
+      "respuesta1": "El compuesto X no se filtra libremente en el glomérulo",
+      "respuesta2": "El compuesto X se reabsorbe en la rama descendente del asa de Henle",
+      "respuesta3": "El compuesto X se reabsorbe en el túbulo contorneado proximal",
+      "respuestaCorrecta": "El compuesto X se secreta en el túbulo contorneado proximal"
+    },
+    {
+      "codigo": "FIS-REN-8",
+      "pregunta": "Mujer de 62 años con dolor lumbar crónico, artritis reumatoide severa y fractura de cadera. ¿Qué patrón de laboratorio se esperaría?",
+      "respuesta1": "Calcio ↓, fósforo ↑, fosfatasa alcalina ↓",
+      "respuesta2": "Calcio normal, fósforo normal, fosfatasa alcalina ↑",
+      "respuesta3": "Calcio ↑, fósforo ↓, fosfatasa alcalina ↑",
+      "respuestaCorrecta": "Calcio normal, fósforo normal, fosfatasa alcalina normal"
+    },
+    {
+      "codigo": "FIS-REN-9",
+      "pregunta": "Paciente con diabetes mellitus presenta poliuria osmótica. ¿En qué segmento ocurre la reabsorción principal de glucosa?",
+      "respuesta1": "Asa ascendente gruesa",
+      "respuesta2": "Asa descendente delgada",
+      "respuesta3": "Túbulo colector cortical",
+      "respuestaCorrecta": "Túbulo contorneado proximal S1"
+    },
+    {
+      "codigo": "FIS-REN-10",
+      "pregunta": "Varón de 81 años, hipertenso con creatinina de 1,2 mg/dl, presenta disminución del flujo urinario. ¿Cuál es el mecanismo más probable?",
+      "respuesta1": "Aumento de presión hidrostática del capilar glomerular",
+      "respuesta2": "Aumento de la resistencia de la arteriola eferente",
+      "respuesta3": "Disminución de la presión hidrostática en la cápsula de Bowman",
+      "respuestaCorrecta": "Disminución del coeficiente de filtración glomerular"
+    }
+  ],
+  "Fisiología Digestiva": [
+    {
+      "codigo": "FIS-DIG-1",
+      "pregunta": "Hombre de 43 años con acidez, heces negras, bebedor, dolor epigástrico. ¿Niveles séricos de cuál sustancia estarán elevados?",
+      "respuesta1": "Colecistoquinina",
+      "respuesta2": "Factor intrínseco",
+      "respuesta3": "Secretina",
+      "respuestaCorrecta": "Gastrina"
+    },
+    {
+      "codigo": "FIS-DIG-2",
+      "pregunta": "Recién nacido con lactancia materna exclusiva presenta diarrea. Al suspenderla y dar fórmula con fructosa se controla. ¿Qué transportador está alterado?",
+      "respuesta1": "GLUT2",
+      "respuesta2": "PepT1",
+      "respuesta3": "GLUT5",
+      "respuestaCorrecta": "SGLT1"
+    },
+    {
+      "codigo": "FIS-DIG-3",
+      "pregunta": "Respecto a la vena gástrica que drena el estómago durante la secreción activa de HCl. ¿Cuál descripción es correcta?",
+      "respuesta1": "Disminución del pH sanguíneo por liberación de H⁺",
+      "respuesta2": "Aumento del CO₂ venoso por disminución del metabolismo",
+      "respuesta3": "Disminución del bicarbonato por consumo",
+      "respuestaCorrecta": "Aumento transitorio del bicarbonato en sangre venosa gástrica (alcalinización relativa)"
+    },
+    {
+      "codigo": "FIS-DIG-4",
+      "pregunta": "Hombre de 45 años con dolor urente en epigastrio que mejora al comer. ¿El bloqueo de cuál receptor mejoraría los síntomas?",
+      "respuesta1": "Colecistoquinina B",
+      "respuesta2": "Muscarínico 3",
+      "respuesta3": "Norepinefrina",
+      "respuestaCorrecta": "Histamina 2"
+    },
+    {
+      "codigo": "FIS-DIG-5",
+      "pregunta": "Varón de 46 años con esteatorrea, pérdida de peso y pancreatitis crónica. Hay secreción biliar normal pero falla la hidrólisis de triglicéridos. ¿Cuál molécula está deficiente?",
+      "respuesta1": "Amilasa",
+      "respuesta2": "Fosfolipasa A2",
+      "respuesta3": "Tripsina",
+      "respuestaCorrecta": "Colipasa"
+    },
+    {
+      "codigo": "FIS-DIG-6",
+      "pregunta": "En el vaciamiento gástrico, cuando la onda peristáltica alcanza el píloro, este se contrae. ¿Qué volúmenes se expulsan y retropulsan de un total de ~30 mL?",
+      "respuesta1": "1 mL de expulsión y 29 mL de retropulsión",
+      "respuesta2": "4 mL de expulsión y 26 mL de retropulsión",
+      "respuesta3": "5 mL de expulsión y 25 mL de retropulsión",
+      "respuestaCorrecta": "3 mL de expulsión y 27 mL de retropulsión"
+    },
+    {
+      "codigo": "FIS-DIG-7",
+      "pregunta": "Varón de 25 años con ictericia, dolor abdominal y vesícula palpable. Bilirrubina directa elevada. ¿Cuál marcador estará alterado?",
+      "respuesta1": "Aspartato aminotransferasa disminuida",
+      "respuesta2": "Alanina aminotransferasa elevada",
+      "respuesta3": "Glucoroniltranferasa disminuida",
+      "respuestaCorrecta": "Fosfatasa alcalina elevada"
+    },
+    {
+      "codigo": "FIS-DIG-8",
+      "pregunta": "Niña con dificultad visual en poca luz (déficit de vitamina A). ¿Cómo se absorbe este nutriente?",
+      "respuesta1": "Transporte mediado por factor intrínseco",
+      "respuesta2": "Transporte mediado por apoferritina",
+      "respuesta3": "Cotransporte dependiente de sodio",
+      "respuestaCorrecta": "Transporte mediado por micelas"
+    },
+    {
+      "codigo": "FIS-DIG-9",
+      "pregunta": "Glándula salival encapsulada con acinos serosos y mucosos (con semilunas serosas), con predominio seroso. ¿Cuál es?",
+      "respuesta1": "Glándula parótida",
+      "respuesta2": "Glándula sublingual",
+      "respuesta3": "Glándulas esofágicas submucosas",
+      "respuestaCorrecta": "Glándula submandibular"
+    },
+    {
+      "codigo": "FIS-DIG-10",
+      "pregunta": "Varón de 30 años con hepatopatía crónica, ictericia, sangrado, albúmina 2.0 y TP prolongado. ¿Qué función hepática alterada explica la hemorragia?",
+      "respuesta1": "Transporte de ácidos grasos libres",
+      "respuesta2": "Regulación del equilibrio ácido-base",
+      "respuesta3": "Mantenimiento de la presión oncótica",
+      "respuestaCorrecta": "Participación en la coagulación sanguínea"
+    }
+  ]
+}

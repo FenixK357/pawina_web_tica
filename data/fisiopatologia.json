@@ -1,0 +1,166 @@
+{
+  "Reumatología": [
+    {
+      "codigo": "PAT-REU-1",
+      "pregunta": "Mujer de 28 años con LES. Se decide iniciar metotrexato. ¿Qué prueba se debe realizar antes de comenzar?",
+      "respuesta1": "Pruebas de función pulmonar",
+      "respuesta2": "Cistoscopia",
+      "respuesta3": "Evaluación oftalmológica",
+      "respuestaCorrecta": "Pruebas de función hepática"
+    },
+    {
+      "codigo": "PAT-REU-2",
+      "pregunta": "Mujer de 31 años con fatiga, artralgias, erupción fotosensible, rash malar y úlceras orales. ¿Cuál manifestación cutánea es más característica?",
+      "respuesta1": "Placas eritematosas con descamación gruesa en superficies extensoras",
+      "respuesta2": "Vesículas agrupadas sobre base eritematosa en dermatomas",
+      "respuesta3": "Lesiones nodulares dolorosas en la cara anterior de las piernas",
+      "respuestaCorrecta": "Eritema en mejillas y puente nasal que respeta los surcos nasolabiales"
+    },
+    {
+      "codigo": "PAT-REU-3",
+      "pregunta": "Mujer de 22 años con fatiga, artralgias y rash fotosensible tras iniciar anticonceptivos. ANA y anti-ADN positivos. ¿Qué factor explica mejor el desencadenamiento?",
+      "respuesta1": "Activación de linfocitos T por antígenos bacterianos",
+      "respuesta2": "Disminución de la síntesis hepática de proteínas del complemento",
+      "respuesta3": "Exposición a toxinas bacterianas que activan neutrófilos",
+      "respuestaCorrecta": "Aumento de estrógenos que favorece la activación de linfocitos B autorreactivos"
+    },
+    {
+      "codigo": "PAT-REU-4",
+      "pregunta": "Mujer de 26 años con fatiga, dolor articular, rash malar y úlceras orales. ANA positivos. ¿Cuál manifestación adicional es más probable?",
+      "respuesta1": "Artritis erosiva con destrucción articular",
+      "respuesta2": "Vesículas dolorosas en distribución dermatomal",
+      "respuesta3": "Depósitos de cristales de urato en articulaciones",
+      "respuestaCorrecta": "Derrame pleural por inflamación de serosas"
+    },
+    {
+      "codigo": "PAT-REU-5",
+      "pregunta": "Mujer de 42 años con dolor articular, trombosis venosas, derrames en rodillas y placas eritematosas en orejas/cuero cabelludo. ¿Qué prueba revelará el diagnóstico?",
+      "respuesta1": "Anticuerpos antipéptidos citrulinados positivos",
+      "respuesta2": "Disminución del tiempo de tromboplastina parcial activada",
+      "respuesta3": "Anticuerpos antinucleares negativos",
+      "respuestaCorrecta": "Prueba rápida de reagina plasmática positiva"
+    },
+    {
+      "codigo": "PAT-REU-6",
+      "pregunta": "Recién nacido de madre con Sjögren (anti-Ro positivos) presenta lesiones cutáneas y bloqueo AV de segundo grado. ¿Qué complicación requiere intervención permanente?",
+      "respuesta1": "Lesiones cutáneas con descamación",
+      "respuesta2": "Hepatomegalia transitoria",
+      "respuesta3": "Citopenias leves",
+      "respuestaCorrecta": "Bloqueo auriculoventricular congénito"
+    },
+    {
+      "codigo": "PAT-REU-7",
+      "pregunta": "Hombre de 57 años con fiebre, dolor en muñecas y tobillos tras iniciar hidralazina. ¿Qué autoanticuerpo es más probable encontrar?",
+      "respuesta1": "Anti-ADN bicatenario",
+      "respuesta2": "Anti-Smith",
+      "respuesta3": "Anti-β2-glicoproteína",
+      "respuestaCorrecta": "Antihistona"
+    },
+    {
+      "codigo": "PAT-REU-8",
+      "pregunta": "Hombre de 40 años minero y fumador, con disnea, rigidez matutina, hinchazón articular y nódulos pulmonares basales. ¿Qué autoanticuerpo es característico?",
+      "respuesta1": "Anti-Scl 70",
+      "respuesta2": "Anti-Ro",
+      "respuesta3": "Anti-ds-DNA",
+      "respuestaCorrecta": "Anti-CCP"
+    },
+    {
+      "codigo": "PAT-REU-9",
+      "pregunta": "Mujer de 32 años con fatiga, dolor articular, eritema malar y úlceras orales. ¿Qué hallazgo es más probable en su evaluación?",
+      "respuesta1": "Aumento del recuento de plaquetas",
+      "respuesta2": "Aumento del componente 3 del complemento",
+      "respuesta3": "Aumento del tiempo de protrombina",
+      "respuestaCorrecta": "Disminución del recuento de linfocitos"
+    },
+    {
+      "codigo": "PAT-REU-10",
+      "pregunta": "Hombre de 55 años, exatleta, con dolor bilateral en muñecas y rodillas que empeora con el uso, rigidez de 20 min y nódulos en IFD. ¿Cuál es el diagnóstico?",
+      "respuesta1": "Espondiloartritis anquilosante",
+      "respuesta2": "Artritis reumatoide",
+      "respuesta3": "Gota",
+      "respuestaCorrecta": "Osteoartritis"
+    }
+  ],
+  "Gastroenterología": [
+    {
+      "codigo": "PAT-GAS-1",
+      "pregunta": "Varón de 72 años con sobredosis de analgésico, AST 1500, ALT 1230. ¿Qué intervención revierte el mecanismo fisiopatológico del daño hepático?",
+      "respuesta1": "Inhibición de la β-oxidación mitocondrial",
+      "respuesta2": "Bloqueo de la captación sinusoidal del fármaco",
+      "respuesta3": "Estimulación de la conjugación glucurónida",
+      "respuestaCorrecta": "Reposición de grupos sulfhidrilo para regenerar glutatión y neutralizar el metabolito tóxico reactivo"
+    },
+    {
+      "codigo": "PAT-GAS-2",
+      "pregunta": "Hombre de 25 años con ictericia, bilirrubina total 5, directa 0.3, AST 25, ALT 15. ¿Cuál es la patología más probable?",
+      "respuesta1": "Disminución de la captación hepática de bilirrubina no conjugada",
+      "respuesta2": "Obstrucción del conducto biliar",
+      "respuesta3": "Hemólisis",
+      "respuestaCorrecta": "Disminución de la conjugación de bilirrubina por la UDP-glucuronosiltransferasa"
+    },
+    {
+      "codigo": "PAT-GAS-3",
+      "pregunta": "Varón de 59 años con cirrosis alcohólica, eritema palmar, ginecomastia, angiomas aracniformes. ¿Cuál par de hallazgos comparte el mismo mecanismo fisiopatológico?",
+      "respuesta1": "Ictericia y temblor aleteante",
+      "respuesta2": "Varices esofágicas y edema en los pies",
+      "respuesta3": "Caput medusae y araña angiomata",
+      "respuestaCorrecta": "Eritema palmar y ginecomastia"
+    },
+    {
+      "codigo": "PAT-GAS-4",
+      "pregunta": "Adolescente de 16 años con dolor abdominal que migra de periumbilical a fosa ilíaca derecha. ¿Qué combinación de nervios explica las dos ubicaciones del dolor?",
+      "respuesta1": "Nervios simpáticos T8-T10 para el dolor periumbilical; nervio vago para el dolor en cuadrante inferior derecho",
+      "respuesta2": "Nervios parasimpáticos S2-S4 para el dolor periumbilical; nervios simpáticos T10-T12",
+      "respuesta3": "Nervio vago para el dolor periumbilical; nervios simpáticos L1-L2",
+      "respuestaCorrecta": "Nervios simpáticos T8-T10 para el dolor periumbilical visceral; nervios somáticos ilioinguinal e iliohipogástrico para el dolor localizado en cuadrante inferior derecho"
+    },
+    {
+      "codigo": "PAT-GAS-5",
+      "pregunta": "Hombre de 44 años con micción frecuente, sed, piel oscurecida, masa en CSD, glucemia 220. ¿Cuál describe la patogenia del proceso en el hígado?",
+      "respuesta1": "Aumento de la síntesis de eritropoyetina",
+      "respuesta2": "Defecto en la síntesis de cadenas de globina",
+      "respuesta3": "Alteración en el transporte de cobre",
+      "respuestaCorrecta": "Disminución de la producción de hepcidina que incrementa la actividad de ferroportina y la absorción intestinal de hierro"
+    },
+    {
+      "codigo": "PAT-GAS-6",
+      "pregunta": "Mujer de 25 años con ictericia leve recurrente, hiperbilirrubinemia no conjugada leve, resto de laboratorio normal. ¿Cuál es el diagnóstico más probable?",
+      "respuesta1": "Síndrome de Crigler-Najjar tipo II",
+      "respuesta2": "Síndrome de Crigler-Najjar tipo I",
+      "respuesta3": "Anemia hemolítica",
+      "respuestaCorrecta": "Síndrome de Gilbert"
+    },
+    {
+      "codigo": "PAT-GAS-7",
+      "pregunta": "Hombre de 35 años con ictericia, fatiga, dolor en CSD, bilirrubina mixta elevada, AST/ALT marcadamente elevadas y FA ligeramente aumentada. ¿Qué mecanismo explica este patrón?",
+      "respuesta1": "Obstrucción del flujo biliar con acumulación retrógrada",
+      "respuesta2": "Hemólisis masiva",
+      "respuesta3": "Defecto hereditario en el transportador MRP2",
+      "respuestaCorrecta": "Necrosis hepatocelular con liberación de transaminasas intracelulares y alteración simultánea de conjugación y excreción de bilirrubina"
+    },
+    {
+      "codigo": "PAT-GAS-8",
+      "pregunta": "Hombre de 70 años con dolor y picazón en un área de la piel en un lado del abdomen hacia la espalda, sin erupción aparente. ¿Cuál es el diagnóstico más probable?",
+      "respuesta1": "Trombosis crónica de la vena porta",
+      "respuesta2": "Escabiosis (sarna)",
+      "respuesta3": "Policitemia vera",
+      "respuestaCorrecta": "Herpes zóster (culebrilla)"
+    },
+    {
+      "codigo": "PAT-GAS-9",
+      "pregunta": "Estudiante de 22 años con diarrea intermitente y dolor cólico que alivia con la defecación. Sin banderas de alarma. ¿Cuál es el criterio diagnóstico básico del trastorno?",
+      "respuesta1": "Los síntomas están presentes al menos 2 meses",
+      "respuesta2": "Síntomas que no se alivian con la defecación",
+      "respuesta3": "No hay cambios en la frecuencia de las deposiciones",
+      "respuestaCorrecta": "Dolor abdominal recurrente al menos 1 día por semana en los últimos 3 meses"
+    },
+    {
+      "codigo": "PAT-GAS-10",
+      "pregunta": "Mujer de 25 años con dolor abdominal progresivo en CID, fiebre, defensa localizada. TC muestra colección localizada alrededor del apéndice. ¿Cuál es la complicación más probable?",
+      "respuesta1": "Pileflebitis",
+      "respuesta2": "Peritonitis generalizada",
+      "respuesta3": "Isquemia mesentérica",
+      "respuestaCorrecta": "Absceso apendicular"
+    }
+  ]
+}

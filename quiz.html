@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cuestionario</title>
+  <style>
+    body { font-family: Arial; background: #46178f; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    .caja { background: white; color: #333; padding: 30px; border-radius: 10px; width: 600px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    h2 { font-size: 18px; color: #666; margin-bottom: 20px; }
+    h1 { font-size: 22px; margin-bottom: 30px; }
+    .opciones { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+    .btn-opcion { padding: 15px; font-size: 16px; cursor: pointer; border: none; border-radius: 8px; color: white; font-weight: bold; transition: 0.2s; }
+    .btn-opcion:hover { opacity: 0.8; transform: scale(1.02); }
+    .rojo { background: #e21b3c; } .azul { background: #1368ce; }
+    .amarillo { background: #d89e00; } .verde { background: #26890c; }
+    .progreso { margin-bottom: 20px; font-weight: bold; color: #46178f; }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <div class="progreso" id="progreso">Pregunta 1 de 10</div>
+    <h2 id="codigoPregunta">FIS-REN-1</h2>
+    <h1 id="preguntaTexto">Cargando...</h1>
+    
+    <div class="opciones" id="contenedorOpciones"></div>
+  </div>
+
+  <script>
+    const preguntas = JSON.parse(sessionStorage.getItem('preguntasQuiz') || '[]');
+    const codigoUsuario = sessionStorage.getItem('codigoUsuario');
+    let indiceActual = 0;
+    let respuestasUsuario = [];
+    const colores = ['rojo', 'azul', 'amarillo', 'verde'];
+
+    function cargarPregunta() {
+      if (indiceActual >= preguntas.length) {
+        sessionStorage.setItem('respuestasTemporales', JSON.stringify(respuestasUsuario));
+
+        // Al terminar, enviamos las respuestas y vamos a resultados
+        fetch('/api/respuestas', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(respuestasUsuario)
+        }).then(() => {
+          window.location.href = 'resultados.html';
+        });
+        return;
+      }
+
+      const p = preguntas[indiceActual];
+      document.getElementById('progreso').textContent = `Pregunta ${indiceActual + 1} de ${preguntas.length}`;
+      document.getElementById('codigoPregunta').textContent = p.codigo;
+      document.getElementById('preguntaTexto').textContent = p.pregunta;
+
+      // Creamos las 4 opciones (la correcta y 3 incorrectas)
+      let opciones = [
+        { texto: p.respuestaCorrecta, esCorrecta: true },
+        { texto: p.respuesta1, esCorrecta: false },
+        { texto: p.respuesta2, esCorrecta: false },
+        { texto: p.respuesta3, esCorrecta: false }
+      ].sort(() => Math.random() - 0.5); // Mezclar botones
+
+      const contenedor = document.getElementById('contenedorOpciones');
+      contenedor.innerHTML = '';
+
+      opciones.forEach((op, i) => {
+        const btn = document.createElement('button');
+        btn.className = `btn-opcion ${colores[i]}`;
+        btn.textContent = op.texto;
+        btn.onclick = () => seleccionarRespuesta(p, op);
+        contenedor.appendChild(btn);
+      });
+    }
+
+    function seleccionarRespuesta(pregunta, opcionElegida) {
+      // Guardar en el arreglo
+      respuestasUsuario.push({
+        codigoUsuario: codigoUsuario,
+        codigoPregunta: pregunta.codigo,
+        respuesta: opcionElegida.texto,
+        esCorrecta: opcionElegida.esCorrecta ? "verdadero" : "falso"
+      });
+      
+      indiceActual++;
+      cargarPregunta();
+    }
+
+    cargarPregunta();
+  </script>
+</body>
+</html>

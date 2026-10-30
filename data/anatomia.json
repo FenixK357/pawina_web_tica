@@ -1,0 +1,166 @@
+{
+  "Cardiovascular": [
+    {
+      "codigo": "ANA-CAR-1",
+      "pregunta": "Hombre de 48 años con fiebre, soplo holosistólico apical irradiado a axila, hemocultivos positivos para S. viridans y vegetación en válvula izquierda. ¿Cuál es el sitio más probable de la vegetación?",
+      "respuesta1": "Seno coronario",
+      "respuesta2": "Vena cava superior",
+      "respuesta3": "Válvula pulmonar",
+      "respuestaCorrecta": "Válvula mitral"
+    },
+    {
+      "codigo": "ANA-CAR-2",
+      "pregunta": "Hombre de 58 años con hemiparesia izquierda 2 semanas post-infarto anterior. Eco muestra acinesia apical y masa mural adherida al endocardio. ¿Cuál es el sitio de formación del trombo?",
+      "respuesta1": "Aurícula derecha posterior",
+      "respuesta2": "Orejuela auricular derecha",
+      "respuesta3": "Válvula pulmonar",
+      "respuestaCorrecta": "Ápex del ventrículo izquierdo"
+    },
+    {
+      "codigo": "ANA-CAR-3",
+      "pregunta": "Mujer de 19 años con disnea, desdoblamiento fijo del 2do ruido, soplo eyectivo pulmonar y drenaje anómalo de vena pulmonar superior derecha a VCS. ¿Qué mecanismo explica la sobrecarga derecha?",
+      "respuesta1": "Compresión de la tráquea y el esófago por un doble arco aórtico",
+      "respuesta2": "Obstrucción completa del tronco pulmonar",
+      "respuesta3": "Drenaje normal de todas las venas pulmonares hacia la aurícula izquierda",
+      "respuestaCorrecta": "Retorno anómalo de sangre oxigenada desde una vena pulmonar hacia la circulación venosa sistémica"
+    },
+    {
+      "codigo": "ANA-CAR-4",
+      "pregunta": "Hombre de 67 años con IAM inferior (elevación ST en II, III, aVF) y bradicardia sinusal por oclusión proximal de coronaria derecha. ¿Qué mecanismo explica la bradicardia?",
+      "respuesta1": "Necrosis del músculo papilar anterolateral",
+      "respuesta2": "Infarto del haz de His por oclusión de la circunfleja distal",
+      "respuesta3": "Isquemia del nodo auriculoventricular irrigado por la interventricular anterior",
+      "respuestaCorrecta": "Isquemia del nodo sinoauricular irrigado por una rama de la arteria coronaria derecha"
+    },
+    {
+      "codigo": "ANA-CAR-5",
+      "pregunta": "Hombre de 66 años con válvula aórtica bicúspide, endocarditis por E. faecalis, bloqueo AV progresivo y extensión infecciosa al anillo valvular. ¿Qué estructura está en mayor riesgo?",
+      "respuesta1": "Válvula pulmonar",
+      "respuesta2": "Nodo sinoauricular en la vena cava superior",
+      "respuesta3": "Músculo papilar anterolateral",
+      "respuestaCorrecta": "Nodo auriculoventricular y haz de His"
+    },
+    {
+      "codigo": "ANA-CAR-6",
+      "pregunta": "Hombre de 67 años con ronquera y tos seca. Angio-TC muestra aneurisma de arco aórtico cerca del ligamento arterioso. ¿Qué estructura está siendo comprimida?",
+      "respuesta1": "Nervio frénico izquierdo",
+      "respuesta2": "Tronco simpático cervical",
+      "respuesta3": "Nervio vago derecho",
+      "respuestaCorrecta": "Nervio laríngeo recurrente izquierdo"
+    },
+    {
+      "codigo": "ANA-CAR-7",
+      "pregunta": "Hombre de 35 años con taponamiento cardíaco. Se realiza pericardiocentesis subxifoidea. ¿Cuál estructura se intenta evitar principalmente?",
+      "respuesta1": "Conducto torácico",
+      "respuesta2": "Arteria interventricular anterior",
+      "respuesta3": "Nervio vago derecho en el mediastino posterior",
+      "respuestaCorrecta": "Nervio frénico y vasos pericardiofrénicos"
+    },
+    {
+      "codigo": "ANA-CAR-8",
+      "pregunta": "Mujer de 29 años con fiebre, soplo holosistólico en borde esternal izquierdo que aumenta con inspiración, y émbolos pulmonares sépticos por S. aureus (uso de drogas IV). ¿Cuál es el sitio de formación del material embólico?",
+      "respuesta1": "Ápex del ventrículo izquierdo",
+      "respuesta2": "Orejuela auricular izquierda",
+      "respuesta3": "Músculo papilar posteromedial",
+      "respuestaCorrecta": "Válvula tricúspide"
+    },
+    {
+      "codigo": "ANA-CAR-9",
+      "pregunta": "Hombre de 61 años con taquicardia ventricular post-infarto anterior, cicatriz en tabique y pared anterior. ¿Qué estructura participa en el circuito de reentrada?",
+      "respuesta1": "Haz de His localizado en la orejuela derecha",
+      "respuesta2": "Nodo auriculoventricular ubicado en la pared libre del ventrículo izquierdo",
+      "respuesta3": "Fascículo de Bachmann localizado dentro del tabique interventricular muscular",
+      "respuestaCorrecta": "Fibras de Purkinje distribuidas en la capa subendocárdica ventricular"
+    },
+    {
+      "codigo": "ANA-CAR-10",
+      "pregunta": "Recién nacido de 10 días con taquipnea, pulsos braquiales fuertes, femorales débiles y estrechamiento de la aorta distal a la subclavia izquierda. ¿Qué estructura está relacionada con el estrechamiento?",
+      "respuesta1": "Vena cava superior",
+      "respuesta2": "Arteria pulmonar derecha",
+      "respuesta3": "Seno coronario",
+      "respuestaCorrecta": "Ligamento arterioso"
+    }
+  ],
+  "Digestiva": [
+    {
+      "codigo": "ANA-DIG-1",
+      "pregunta": "Hombre de 62 años con úlcera en curvatura menor, cerca de la unión gastroesofágica, con sangrado arterial pulsátil en el borde superior. ¿Cuál es la fuente más probable?",
+      "respuesta1": "Arteria gastroomental derecha",
+      "respuesta2": "Arteria esplénica",
+      "respuesta3": "Arterias gástricas cortas",
+      "respuestaCorrecta": "Arteria gástrica izquierda"
+    },
+    {
+      "codigo": "ANA-DIG-2",
+      "pregunta": "¿Cuál opción representa una rama anterior impar de la aorta abdominal que irriga tubo gastrointestinal?",
+      "respuesta1": "Arteria renal izquierda",
+      "respuesta2": "Arteria suprarrenal media derecha",
+      "respuesta3": "Arteria gonadal derecha",
+      "respuestaCorrecta": "Arteria mesentérica inferior"
+    },
+    {
+      "codigo": "ANA-DIG-3",
+      "pregunta": "Hombre de 56 años con cirrosis, hematemesis y varices esofágicas distales. ¿Cuál anastomosis explica este hallazgo?",
+      "respuesta1": "Vena rectal superior ↔ venas rectales media e inferior",
+      "respuesta2": "Venas paraumbilicales ↔ venas epigástricas superficiales",
+      "respuesta3": "Vena esplénica ↔ vena renal izquierda",
+      "respuestaCorrecta": "Vena gástrica izquierda ↔ venas esofágicas que drenan al sistema ácigos"
+    },
+    {
+      "codigo": "ANA-DIG-4",
+      "pregunta": "¿Cuál de los siguientes ligamentos deriva del mesenterio dorsal y forma parte del omento mayor?",
+      "respuesta1": "Ligamento hepatoduodenal",
+      "respuesta2": "Ligamento falciforme",
+      "respuesta3": "Ligamento hepatogástrico",
+      "respuestaCorrecta": "Ligamento gastrocólico"
+    },
+    {
+      "codigo": "ANA-DIG-5",
+      "pregunta": "Hombre de 61 años con cirrosis y rectorragia por várices rectales (por encima de la línea pectínea). ¿Cuál anastomosis explica estas várices?",
+      "respuesta1": "Vena gástrica izquierda ↔ venas esofágicas",
+      "respuesta2": "Venas paraumbilicales ↔ venas epigástricas superficiales",
+      "respuesta3": "Vena esplénica ↔ vena cava superior",
+      "respuestaCorrecta": "Vena rectal superior ↔ venas rectales media e inferior"
+    },
+    {
+      "codigo": "ANA-DIG-6",
+      "pregunta": "Mujer de 70 años con lesión ulcerada en el fundus gástrico, cerca del bazo. ¿Qué vasos irrigan directamente esta región?",
+      "respuesta1": "Arteria ileocólica",
+      "respuesta2": "Arteria gástrica derecha",
+      "respuesta3": "Arteria mesentérica inferior",
+      "respuestaCorrecta": "Arterias gástricas cortas"
+    },
+    {
+      "codigo": "ANA-DIG-7",
+      "pregunta": "Durante colecistectomía, el cirujano palpa el borde anterior del foramen omental, que contiene la vena porta, arteria hepática y conducto biliar. ¿Qué estructura es?",
+      "respuesta1": "Ligamento falciforme",
+      "respuesta2": "Ligamento gastroesplénico",
+      "respuesta3": "Ligamento esplenorrenal",
+      "respuestaCorrecta": "Ligamento hepatoduodenal"
+    },
+    {
+      "codigo": "ANA-DIG-8",
+      "pregunta": "Hombre de 27 años con traumatismo abdominal cerrado y acumulación de sangre en retroperitoneo central de la línea media. ¿Qué estructura lesionada explica este patrón?",
+      "respuesta1": "Yeyuno proximal",
+      "respuesta2": "Estómago",
+      "respuesta3": "Bazo",
+      "respuestaCorrecta": "Aorta abdominal"
+    },
+    {
+      "codigo": "ANA-DIG-9",
+      "pregunta": "Cirujano moviliza el estómago a la derecha y divide un pliegue peritoneal con vasos gástricos cortos, que separa el saco mayor del menor en el lado izquierdo. ¿Qué ligamento es?",
+      "respuesta1": "Ligamento hepatogástrico",
+      "respuesta2": "Ligamento hepatoduodenal",
+      "respuesta3": "Ligamento falciforme",
+      "respuestaCorrecta": "Ligamento gastroesplénico"
+    },
+    {
+      "codigo": "ANA-DIG-10",
+      "pregunta": "Durante gastrectomía parcial se ligan los vasos que recorren la curvatura mayor gástrica. ¿En qué estructura peritoneal discurren principalmente?",
+      "respuesta1": "Ligamento hepatoduodenal",
+      "respuesta2": "Ligamento falciforme",
+      "respuesta3": "Ligamento esplenorrenal",
+      "respuestaCorrecta": "Ligamento gastrocólico"
+    }
+  ]
+}

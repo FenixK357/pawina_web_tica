@@ -208,10 +208,11 @@
         u => u.usuario === usuario && u.password === pass
       );
 
+// En la parte del LOGIN, reemplaza el if(encontrado) por esto:
       if (encontrado) {
-        // Guardamos el usuario logueado para usarlo luego
         sessionStorage.setItem('usuarioActual', encontrado.usuario);
-        window.location.href = 'test1.html'; // (o test.html, como lo tengas nombrado)
+        sessionStorage.setItem('codigoUsuario', encontrado.codigo); // Guardamos el código único
+        window.location.href = 'menu.html'; // Redirigimos al menú
       } else {
         mensaje.textContent = 'Usuario o contraseña incorrectos.';
         mensaje.className = 'mensaje error';
