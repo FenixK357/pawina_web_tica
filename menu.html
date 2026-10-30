@@ -31,7 +31,7 @@
       temas.forEach(t => {
         const label = document.createElement('label');
         label.className = 'tema';
-        label.innerHTML = `<input type="checkbox" value='${JSON.stringify(t)}' onchange="toggleTema(this)"> ${t.id}`;
+        label.innerHTML = `<input type="checkbox" value='${JSON.stringify(t)}' onchange="toggleTema(this)"> <b>${t.curso}:</b> ${t.id}`;
         listaDiv.appendChild(label);
       });
     });
