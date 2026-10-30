@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Kahoot Prueba</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .caja {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    h2 { text-align: center; color: #333; }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      margin-top: 20px;
+      padding: 12px;
+      background: #0070f3;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #005bb5; }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    .tabs button {
+      margin-top: 0;
+      background: #ccc;
+    }
+    .tabs button.activo { background: #0070f3; }
+    .oculto { display: none; }
+    .mensaje {
+      margin-top: 15px;
+      font-size: 13px;
+      text-align: center;
+    }
+    .error { color: #d32f2f; }
+    .ok { color: #2e7d32; }
+  </style>
+</head>
+<body>
+  <div class="caja">
+    <div class="tabs">
+      <button id="tabLogin" class="activo">Iniciar sesión</button>
+      <button id="tabRegistro">Registrarse</button>
+    </div>
+
+    <!-- FORM LOGIN -->
+    <form id="formLogin">
+      <h2>Iniciar sesión</h2>
+      <label for="loginUser">Usuario</label>
+      <input type="text" id="loginUser" required placeholder="Tu usuario">
+
+      <label for="loginPass">Contraseña</label>
+      <input type="password" id="loginPass" required placeholder="Tu contraseña">
+
+      <button type="submit">Entrar</button>
+    </form>
+
+    <!-- FORM REGISTRO -->
+    <form id="formRegistro" class="oculto">
+      <h2>Registrarse</h2>
+      <label for="regUser">Usuario</label>
+      <input type="text" id="regUser" required placeholder="Elige un usuario">
+
+      <label for="regPass">Contraseña</label>
+      <input type="password" id="regPass" required placeholder="Elige una contraseña">
+
+      <button type="submit">Crear cuenta</button>
+    </form>
+
+    <div id="mensaje" class="mensaje"></div>
+  </div>
+
+  <script>
+    const tabLogin = document.getElementById('tabLogin');
+    const tabRegistro = document.getElementById('tabRegistro');
+    const formLogin = document.getElementById('formLogin');
+    const formRegistro = document.getElementById('formRegistro');
+    const mensaje = document.getElementById('mensaje');
+
+    // Cambio de pestañas
+    tabLogin.addEventListener('click', () => {
+      tabLogin.classList.add('activo');
+      tabRegistro.classList.remove('activo');
+      formLogin.classList.remove('oculto');
+      formRegistro.classList.add('oculto');
+      mensaje.textContent = '';
+    });
+
+    tabRegistro.addEventListener('click', () => {
+      tabRegistro.classList.add('activo');
+      tabLogin.classList.remove('activo');
+      formRegistro.classList.remove('oculto');
+      formLogin.classList.add('oculto');
+      mensaje.textContent = '';
+    });
+
+    // Genera código único (ej: U-8F3K2)
+    function generarCodigo() {
+      const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let codigo = 'U-';
+      for (let i = 0; i < 5; i++) {
+        codigo += letras.charAt(Math.floor(Math.random() * letras.length));
+      }
+      return codigo;
+    }
+
+    // REGISTRO
+    formRegistro.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const usuario = document.getElementById('regUser').value.trim();
+      const pass = document.getElementById('regPass').value.trim();
+
+      if (usuario.length < 3 || pass.length < 3) {
+        mensaje.textContent = 'Usuario y contraseña deben tener al menos 3 caracteres.';
+        mensaje.className = 'mensaje error';
+        return;
+      }
+
+      // Leer usuarios actuales
+      let usuarios = [];
+      try {
+        const res = await fetch('data/usuarios.json');
+        usuarios = await res.json();
+      } catch (err) {
+        usuarios = [];
+      }
+
+      // Verificar duplicado
+      if (usuarios.some(u => u.usuario === usuario)) {
+        mensaje.textContent = 'Ese usuario ya existe.';
+        mensaje.className = 'mensaje error';
+        return;
+      }
+
+      // Crear nuevo usuario
+      const nuevo = {
+        usuario: usuario,
+        password: pass,
+        codigo: generarCodigo()
+      };
+      usuarios.push(nuevo);
+
+      // Guardar en el JSON (necesita servidor, ver server.js)
+      try {
+        await fetch('api/usuarios', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(usuarios)
+        });
+        mensaje.textContent = '¡Registrado! Tu código es: ' + nuevo.codigo;
+        mensaje.className = 'mensaje ok';
+        formRegistro.reset();
+      } catch (err) {
+        mensaje.textContent = 'Error al guardar. ¿Está corriendo el servidor?';
+        mensaje.className = 'mensaje error';
+      }
+    });
+
+    // LOGIN
+    formLogin.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const usuario = document.getElementById('loginUser').value.trim();
+      const pass = document.getElementById('loginPass').value.trim();
+
+      let usuarios = [];
+      try {
+        const res = await fetch('data/usuarios.json');
+        usuarios = await res.json();
+      } catch (err) {
+        usuarios = [];
+      }
+
+      const encontrado = usuarios.find(
+        u => u.usuario === usuario && u.password === pass
+      );
+
+      if (encontrado) {
+        // Guardamos el usuario logueado para usarlo luego
+        sessionStorage.setItem('usuarioActual', encontrado.usuario);
+        window.location.href = 'test1.html';
+      } else {
+        mensaje.textContent = 'Usuario o contraseña incorrectos.';
+        mensaje.className = 'mensaje error';
+      }
+    });
+  </script>
+</body>
+</html>
