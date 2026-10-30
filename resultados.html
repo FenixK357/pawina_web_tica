@@ -3,41 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <title>Resultados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; background: #f0f2f5; padding: 40px; }
-    .caja { background: white; padding: 30px; border-radius: 10px; max-width: 800px; margin: auto; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
-    .nota { text-align: center; font-size: 36px; font-weight: bold; color: #0070f3; margin-bottom: 20px; }
-    .pregunta-item { margin-bottom: 20px; padding: 15px; border-radius: 8px; border: 1px solid #ddd; }
-    .correcta { background: #e8f5e9; border-color: #4caf50; }
-    .incorrecta { background: #ffebee; border-color: #f44336; }
-    .pregunta-item h3 { margin: 0 0 10px 0; font-size: 16px; }
-    .res-user { font-weight: bold; margin-bottom: 5px; }
-    .res-correcta { color: #2e7d32; font-weight: bold; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #8bb8d6;
+      padding: 20px;
+      margin: 0;
+    }
+    .caja {
+      background: #c6c6c6;
+      padding: 25px;
+      border: 4px solid #373737;
+      box-shadow: inset -6px -6px 0px #8b8b8b, inset 6px 6px 0px #ffffff;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      color: #373737;
+      font-size: 16px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0px #fff;
+    }
+    .nota {
+      text-align: center;
+      font-size: 28px;
+      color: #5b8731;
+      margin-bottom: 30px;
+      text-shadow: 2px 2px 0px #2c4a12;
+    }
+    .pregunta-item {
+      margin-bottom: 15px;
+      padding: 15px;
+      background: #e0e0e0;
+      border: 3px solid #373737;
+    }
+    .correcta { background: #b3ffb3; border-color: #1e5c1e; }
+    .incorrecta { background: #ffb3b3; border-color: #a81111; }
+    .pregunta-item h3 { margin: 0 0 15px 0; font-size: 10px; line-height: 1.5; color: #373737; }
+    .res-user { font-size: 9px; margin-bottom: 8px; color: #555; }
+    .res-correcta { font-size: 9px; color: #1e5c1e; font-weight: bold; }
+    .btn-volver {
+      width: 100%;
+      padding: 15px;
+      background: #5b8731;
+      color: white;
+      border: 3px solid #373737;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 25px;
+      box-shadow: inset -4px -4px 0px #2c4a12, inset 4px 4px 0px #8dc75b;
+      text-shadow: 2px 2px 0px #2c4a12;
+    }
+    .btn-volver:active {
+      box-shadow: inset 4px 4px 0px #2c4a12;
+      transform: translateY(2px);
+    }
   </style>
 </head>
 <body>
   <div class="caja">
-    <h1 style="text-align: center;">Resultados</h1>
+    <h1>¡Resultados!</h1>
     <div class="nota" id="notaFinal">0 / 10</div>
     <div id="listaResultados"></div>
-    <button onclick="window.location.href='menu.html'" style="padding: 10px 20px; background: #0070f3; color: white; border: none; border-radius: 6px; cursor: pointer; width: 100%; font-size: 16px; margin-top: 20px;">Volver al Menú</button>
+    <button class="btn-volver" onclick="window.location.href='menu.html'">VOLVER AL MENÚ</button>
   </div>
 
-  <script>
-    // Recuperamos las preguntas originales y las respuestas del usuario
-    const preguntas = JSON.parse(sessionStorage.getItem('preguntasQuiz') || '[]');
-    const usuarioRespuestas = JSON.parse(sessionStorage.getItem('preguntasQuiz') ? '[]' : '[]'); // No guardamos aquí, lo hacemos abajo
-    
-    // Hacemos una petición a la API para obtener las respuestas del usuario que acaba de terminar
-    // Como no tenemos un endpoint que filtre por usuario, lo vamos a hacer todo desde el sessionStorage
-    // ¡Mejor! Guardemos las respuestas del usuario en sessionStorage al final del quiz.
-    
-    // --- IMPORTANTE --- 
-    // Para no complicar el código con otra llamada a la API, modificaremos un poco el quiz.html
-    // para que guarde las respuestas en sessionStorage también.
-  </script>
-
-  <!-- Corregimos el script para que use los datos locales -->
   <script>
     const preguntasOriginales = JSON.parse(sessionStorage.getItem('preguntasQuiz') || '[]');
     const respuestasDelUsuario = JSON.parse(sessionStorage.getItem('respuestasTemporales') || '[]');
@@ -45,7 +79,7 @@
     let aciertos = 0;
     const contenedor = document.getElementById('listaResultados');
 
-    preguntasOriginales.forEach((p, index) => {
+    preguntasOriginales.forEach((p) => {
       const respuestaUser = respuestasDelUsuario.find(r => r.codigoPregunta === p.codigo);
       const esCorrecta = respuestaUser && respuestaUser.esCorrecta === "verdadero";
       
@@ -55,15 +89,14 @@
       div.className = `pregunta-item ${esCorrecta ? 'correcta' : 'incorrecta'}`;
       div.innerHTML = `
         <h3>${p.pregunta}</h3>
-        <div class="res-user">Tu respuesta: ${respuestaUser ? respuestaUser.respuesta : 'No respondida'} ${esCorrecta ? '✅' : '❌'}</div>
-        <div class="res-correcta">Respuesta correcta: ${p.respuestaCorrecta}</div>
+        <div class="res-user">Tu respuesta: ${respuestaUser ? respuestaUser.respuesta : 'Ninguna'} ${esCorrecta ? '✅' : '❌'}</div>
+        <div class="res-correcta">Correcta: ${p.respuestaCorrecta}</div>
       `;
       contenedor.appendChild(div);
     });
 
     document.getElementById('notaFinal').textContent = `${aciertos} / ${preguntasOriginales.length}`;
     
-    // Limpiamos la sesión del quiz
     sessionStorage.removeItem('preguntasQuiz');
     sessionStorage.removeItem('respuestasTemporales');
   </script>

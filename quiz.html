@@ -3,25 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <title>Cuestionario</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial; background: #46178f; color: white; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
-    .caja { background: white; color: #333; padding: 30px; border-radius: 10px; width: 600px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
-    h2 { font-size: 18px; color: #666; margin-bottom: 20px; }
-    h1 { font-size: 22px; margin-bottom: 30px; }
-    .opciones { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-    .btn-opcion { padding: 15px; font-size: 16px; cursor: pointer; border: none; border-radius: 8px; color: white; font-weight: bold; transition: 0.2s; }
-    .btn-opcion:hover { opacity: 0.8; transform: scale(1.02); }
-    .rojo { background: #e21b3c; } .azul { background: #1368ce; }
-    .amarillo { background: #d89e00; } .verde { background: #26890c; }
-    .progreso { margin-bottom: 20px; font-weight: bold; color: #46178f; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Press Start 2P', cursive;
+      background-color: #2b2b2b; /* Fondo oscuro */
+      background-image: radial-gradient(#3f3f3f 2px, transparent 2px);
+      background-size: 30px 30px;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .caja {
+      background: #c6c6c6;
+      color: #373737;
+      padding: 25px;
+      border: 4px solid #373737;
+      box-shadow: inset -6px -6px 0px #8b8b8b, inset 6px 6px 0px #ffffff;
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+    }
+    .progreso {
+      font-size: 10px;
+      color: #555;
+      margin-bottom: 15px;
+      padding: 5px 10px;
+      background: #e0e0e0;
+      display: inline-block;
+      border: 2px solid #373737;
+    }
+    .codigo-pregunta {
+      font-size: 10px;
+      color: #5b8731;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 14px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+      min-height: 60px;
+    }
+    .opciones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .btn-opcion {
+      padding: 20px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      cursor: pointer;
+      border: 3px solid #373737;
+      color: white;
+      line-height: 1.4;
+      transition: 0.1s;
+      text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
+    }
+    .rojo { background: #e21b3c; box-shadow: inset -4px -4px 0px #9c0e23, inset 4px 4px 0px #ff5c7c; }
+    .azul { background: #1368ce; box-shadow: inset -4px -4px 0px #0d4486, inset 4px 4px 0px #4f9dff; }
+    .amarillo { background: #d89e00; box-shadow: inset -4px -4px 0px #8c6600, inset 4px 4px 0px #ffcf42; }
+    .verde { background: #26890c; box-shadow: inset -4px -4px 0px #154f06, inset 4px 4px 0px #5cdc3a; }
+    
+    .btn-opcion:hover { filter: brightness(1.1); }
+    .btn-opcion:active {
+      box-shadow: inset 4px 4px 0px rgba(0,0,0,0.5);
+      transform: translateY(3px);
+    }
+    
+    @media (max-width: 600px) {
+      .opciones { grid-template-columns: 1fr; }
+      h1 { font-size: 11px; }
+      .btn-opcion { font-size: 9px; padding: 15px; }
+    }
   </style>
 </head>
 <body>
   <div class="caja">
-    <div class="progreso" id="progreso">Pregunta 1 de 10</div>
-    <h2 id="codigoPregunta">FIS-REN-1</h2>
-    <h1 id="preguntaTexto">Cargando...</h1>
-    
+    <div class="progreso" id="progreso">Pregunta 1 / 10</div>
+    <div class="codigo-pregunta" id="codigoPregunta">CARGANDO...</div>
+    <h1 id="preguntaTexto">Preparando preguntas...</h1>
     <div class="opciones" id="contenedorOpciones"></div>
   </div>
 
@@ -35,8 +101,6 @@
     function cargarPregunta() {
       if (indiceActual >= preguntas.length) {
         sessionStorage.setItem('respuestasTemporales', JSON.stringify(respuestasUsuario));
-
-        // Al terminar, enviamos las respuestas y vamos a resultados
         fetch('/api/respuestas', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -48,17 +112,16 @@
       }
 
       const p = preguntas[indiceActual];
-      document.getElementById('progreso').textContent = `Pregunta ${indiceActual + 1} de ${preguntas.length}`;
+      document.getElementById('progreso').textContent = `Pregunta ${indiceActual + 1} / ${preguntas.length}`;
       document.getElementById('codigoPregunta').textContent = p.codigo;
       document.getElementById('preguntaTexto').textContent = p.pregunta;
 
-      // Creamos las 4 opciones (la correcta y 3 incorrectas)
       let opciones = [
         { texto: p.respuestaCorrecta, esCorrecta: true },
         { texto: p.respuesta1, esCorrecta: false },
         { texto: p.respuesta2, esCorrecta: false },
         { texto: p.respuesta3, esCorrecta: false }
-      ].sort(() => Math.random() - 0.5); // Mezclar botones
+      ].sort(() => Math.random() - 0.5);
 
       const contenedor = document.getElementById('contenedorOpciones');
       contenedor.innerHTML = '';
@@ -73,14 +136,12 @@
     }
 
     function seleccionarRespuesta(pregunta, opcionElegida) {
-      // Guardar en el arreglo
       respuestasUsuario.push({
         codigoUsuario: codigoUsuario,
         codigoPregunta: pregunta.codigo,
         respuesta: opcionElegida.texto,
         esCorrecta: opcionElegida.esCorrecta ? "verdadero" : "falso"
       });
-      
       indiceActual++;
       cargarPregunta();
     }

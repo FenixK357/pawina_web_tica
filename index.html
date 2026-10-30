@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inicio - Kahoot Prueba</title>
+  <title>Iniciar Sesión - QuizCraft</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f2f5;
+      font-family: 'Press Start 2P', cursive; /* Fuente pixelada */
+      background-color: #8bb8d6; /* Cielo de Minecraft */
+      background-image: 
+        linear-gradient(rgba(139, 184, 214, 0.8), rgba(139, 184, 214, 0.8)),
+        url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAABZJREFUeNpi2r9//38bIyPTfxBggAABAI0QBg81347gAAAAAElFTkSuQmCC');
       display: flex;
       justify-content: center;
       align-items: center;
@@ -15,91 +20,116 @@
       margin: 0;
     }
     .caja {
-      background: white;
-      padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 320px;
+      background: #c6c6c6; /* Color piedra */
+      padding: 20px;
+      border: 4px solid #373737; /* Borde estilo bloque */
+      box-shadow: inset -4px -4px 0px #8b8b8b, inset 4px 4px 0px #ffffff; /* Efecto 3D */
+      width: 100%;
+      max-width: 400px;
     }
-    h2 { text-align: center; color: #333; }
+    h2 {
+      text-align: center;
+      color: #3f3f3f;
+      font-size: 14px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 0px #fff;
+    }
+    .tabs {
+      display: flex;
+      gap: 5px;
+      margin-bottom: 20px;
+    }
+    .tabs button {
+      flex: 1;
+      padding: 10px;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      background: #8b8b8b;
+      color: white;
+      border: 2px solid #373737;
+      cursor: pointer;
+      box-shadow: inset -2px -2px 0px #373737, inset 2px 2px 0px #c6c6c6;
+    }
+    .tabs button.activo {
+      background: #5b8731; /* Verde pasto */
+      box-shadow: inset -2px -2px 0px #2c4a12, inset 2px 2px 0px #8dc75b;
+    }
     label {
       display: block;
       margin-top: 15px;
-      font-size: 14px;
-      color: #555;
+      font-size: 10px;
+      color: #3f3f3f;
     }
     input {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      box-sizing: border-box;
-    }
-    button {
-      width: 100%;
-      margin-top: 20px;
       padding: 12px;
-      background: #0070f3;
+      margin-top: 8px;
+      border: 3px solid #373737;
+      background: #e0e0e0;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 10px;
+      outline: none;
+    }
+    input:focus { background: #fff; }
+    .btn-principal {
+      width: 100%;
+      margin-top: 25px;
+      padding: 15px;
+      background: #5b8731;
       color: white;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
+      border: 3px solid #373737;
+      font-family: 'Press Start 2P', cursive;
+      font-size: 12px;
       cursor: pointer;
+      box-shadow: inset -4px -4px 0px #2c4a12, inset 4px 4px 0px #8dc75b;
+      text-shadow: 2px 2px 0px #2c4a12;
     }
-    button:hover { background: #005bb5; }
-    .tabs {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 15px;
+    .btn-principal:active {
+      box-shadow: inset 4px 4px 0px #2c4a12;
+      transform: translateY(2px);
     }
-    .tabs button {
-      margin-top: 0;
-      background: #ccc;
-    }
-    .tabs button.activo { background: #0070f3; }
     .oculto { display: none; }
     .mensaje {
       margin-top: 15px;
-      font-size: 13px;
+      font-size: 8px;
       text-align: center;
+      line-height: 1.5;
+      padding: 10px;
+      border: 2px solid #373737;
+      background: #e0e0e0;
     }
-    .error { color: #d32f2f; }
-    .ok { color: #2e7d32; }
+    .error { color: #a81111; background: #ffb3b3; }
+    .ok { color: #1e5c1e; background: #b3ffb3; }
   </style>
 </head>
 <body>
   <div class="caja">
     <div class="tabs">
-      <button id="tabLogin" class="activo">Iniciar sesión</button>
+      <button id="tabLogin" class="activo">Iniciar Sesión</button>
       <button id="tabRegistro">Registrarse</button>
     </div>
 
     <!-- FORM LOGIN -->
     <form id="formLogin">
-      <h2>Iniciar sesión</h2>
+      <h2>Entrar al Juego</h2>
       <label for="loginUser">Usuario</label>
       <input type="text" id="loginUser" required placeholder="Tu usuario">
-
       <label for="loginPass">Contraseña</label>
-      <input type="password" id="loginPass" required placeholder="Tu contraseña">
-
-      <button type="submit">Entrar</button>
+      <input type="password" id="loginPass" required placeholder="********">
+      <button type="submit" class="btn-principal">ENTRAR</button>
     </form>
 
     <!-- FORM REGISTRO -->
     <form id="formRegistro" class="oculto">
-      <h2>Registrarse</h2>
+      <h2>Crear Personaje</h2>
       <label for="regUser">Usuario</label>
-      <input type="text" id="regUser" required placeholder="Elige un usuario">
-
+      <input type="text" id="regUser" required placeholder="Elige usuario">
       <label for="regPass">Contraseña</label>
-      <input type="password" id="regPass" required placeholder="Elige una contraseña">
-
-      <button type="submit">Crear cuenta</button>
+      <input type="password" id="regPass" required placeholder="********">
+      <button type="submit" class="btn-principal">REGISTRARSE</button>
     </form>
 
-    <div id="mensaje" class="mensaje"></div>
+    <div id="mensaje" class="mensaje oculto"></div>
   </div>
 
   <script>
@@ -109,13 +139,12 @@
     const formRegistro = document.getElementById('formRegistro');
     const mensaje = document.getElementById('mensaje');
 
-    // Cambio de pestañas
     tabLogin.addEventListener('click', () => {
       tabLogin.classList.add('activo');
       tabRegistro.classList.remove('activo');
       formLogin.classList.remove('oculto');
       formRegistro.classList.add('oculto');
-      mensaje.textContent = '';
+      mensaje.classList.add('oculto');
     });
 
     tabRegistro.addEventListener('click', () => {
@@ -123,73 +152,57 @@
       tabLogin.classList.remove('activo');
       formRegistro.classList.remove('oculto');
       formLogin.classList.add('oculto');
-      mensaje.textContent = '';
+      mensaje.classList.add('oculto');
     });
 
-    // Genera código único (ej: U-8F3K2)
     function generarCodigo() {
       const letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
       let codigo = 'U-';
-      for (let i = 0; i < 5; i++) {
-        codigo += letras.charAt(Math.floor(Math.random() * letras.length));
-      }
+      for (let i = 0; i < 5; i++) codigo += letras.charAt(Math.floor(Math.random() * letras.length));
       return codigo;
     }
 
-    // REGISTRO
     formRegistro.addEventListener('submit', async (e) => {
       e.preventDefault();
       const usuario = document.getElementById('regUser').value.trim();
       const pass = document.getElementById('regPass').value.trim();
 
       if (usuario.length < 3 || pass.length < 3) {
-        mensaje.textContent = 'Usuario y contraseña deben tener al menos 3 caracteres.';
+        mensaje.textContent = 'Mínimo 3 caracteres.';
         mensaje.className = 'mensaje error';
         return;
       }
 
-      // Leer usuarios actuales
       let usuarios = [];
       try {
-        // ✅ CORRECCIÓN: Llamamos a la API para leer el Blob
         const res = await fetch('/api/usuarios');
         usuarios = await res.json();
-      } catch (err) {
-        usuarios = [];
-      }
+      } catch (err) { usuarios = []; }
 
-      // Verificar duplicado
       if (usuarios.some(u => u.usuario === usuario)) {
         mensaje.textContent = 'Ese usuario ya existe.';
         mensaje.className = 'mensaje error';
         return;
       }
 
-      // Crear nuevo usuario
-      const nuevo = {
-        usuario: usuario,
-        password: pass,
-        codigo: generarCodigo()
-      };
+      const nuevo = { usuario, password: pass, codigo: generarCodigo() };
       usuarios.push(nuevo);
 
-      // Guardar en el JSON
       try {
-        await fetch('/api/usuarios', { // Añadí la barra '/' al inicio por seguridad
+        await fetch('/api/usuarios', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(usuarios)
         });
-        mensaje.textContent = '¡Registrado! Tu código es: ' + nuevo.codigo;
+        mensaje.textContent = '¡Registrado! Tu código: ' + nuevo.codigo;
         mensaje.className = 'mensaje ok';
         formRegistro.reset();
       } catch (err) {
-        mensaje.textContent = 'Error al guardar. Inténtalo de nuevo.';
+        mensaje.textContent = 'Error al guardar.';
         mensaje.className = 'mensaje error';
       }
     });
 
-        // LOGIN
     formLogin.addEventListener('submit', async (e) => {
       e.preventDefault();
       const usuario = document.getElementById('loginUser').value.trim();
@@ -197,22 +210,16 @@
 
       let usuarios = [];
       try {
-        // ✅ CORRECCIÓN: Llamamos a nuestra API, no a un archivo local
         const res = await fetch('/api/usuarios');
         usuarios = await res.json();
-      } catch (err) {
-        usuarios = [];
-      }
+      } catch (err) { usuarios = []; }
 
-      const encontrado = usuarios.find(
-        u => u.usuario === usuario && u.password === pass
-      );
+      const encontrado = usuarios.find(u => u.usuario === usuario && u.password === pass);
 
-// En la parte del LOGIN, reemplaza el if(encontrado) por esto:
       if (encontrado) {
         sessionStorage.setItem('usuarioActual', encontrado.usuario);
-        sessionStorage.setItem('codigoUsuario', encontrado.codigo); // Guardamos el código único
-        window.location.href = 'menu.html'; // Redirigimos al menú
+        sessionStorage.setItem('codigoUsuario', encontrado.codigo);
+        window.location.href = 'menu.html';
       } else {
         mensaje.textContent = 'Usuario o contraseña incorrectos.';
         mensaje.className = 'mensaje error';
